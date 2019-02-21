@@ -3,15 +3,15 @@ import Logo from '../../assets/newlogo.svg';
 import IGLogo from '../../assets/iglogo.png';
 import './SearchBar.css';
 
-const SearchBar = () => {
+const SearchBar = props => {
   return (
     <div className="search-bar-wrapper">
       <div className="image-wrapper">
         <img alt="instagram logo" src={Logo} className="logo-image" />
         <img alt="instagram logo text" src={IGLogo} className="logo-image-text" />
       </div>
-      <div className="search-box">
-        <input type="text" placeholder="Search" />
+      <div>
+        <input type="text" placeholder="Search" onKeyDown={props.searchPosts} />
       </div>
       <div className="social-wrapper">
         <div className="social">
